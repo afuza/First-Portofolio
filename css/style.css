@@ -1,0 +1,314 @@
+:root{
+    font-size: 16px;
+    font-family: 'Roboto Slab', serif;
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --transition-speed: 600ms;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar{
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+body::-webkit-scrollbar-thumb{
+    background: #6649b8;
+}
+
+canvas {
+    display: block;
+  }
+  
+ #snowfall {
+    width: 100%;
+    height: 100vh;
+}
+.opening-text {
+    position: absolute;
+    padding: 4rem;
+}
+
+.title-content{
+    display: block;
+    opacity: 0;
+    animation: revealText 2s forwards; /*Adding the animation over .5 seconds. Forwards means the last state will be the styles applied at 100% (to).*/
+}
+/*Adding individual animation delays so that the text animates in at different stages.*/
+.title-second{
+    animation-delay: .175s;
+}
+.title-third{
+    animation-delay: .25s;
+}
+.title-fourth{
+    animation-delay: .325s;
+}
+main{
+    margin-left: 19rem;
+    margin-right: 17rem;
+    padding : 1rem;
+}
+main h1{
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-style: oblique;
+}
+main p{
+    font-family: 'Tiro Gurmukhi', serif;
+    text-align: justify;
+}
+.navbar{
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width 200ms ease;
+}
+
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    height: 100%;
+}
+
+.nav-item{
+    width: 100%;
+}
+
+.nav-item:last-child{
+    margin-top: auto;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+}
+
+.nav-link:hover{
+ filter: grayscale(0%) opacity(1);
+ background: var(--bg-secondary);
+ color: var(--text-secondary);
+}
+
+.link-text {
+    display: none;
+    margin-left: 1rem;
+}
+
+.nav-link svg {
+width: 2rem;
+min-width: 2rem;
+margin: 0 1.25rem;
+}
+
+.fa-primary{
+    color: #ff7eee;
+}
+.fa-secondary{
+    color: #df49a6;
+}
+
+.fa-primary,
+.fa-secondary{
+    transition: var(--transition-speed);
+}
+
+
+.logo{
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    font-size: 1.2rem;
+    letter-spacing: 0.3ch;
+    width: 100%;
+}
+
+.logo svg{
+    transform: rotate(0deg);
+    transition: var(--transition-speed);
+}
+
+.logo-text {
+    display: inline;
+    position: absolute;
+    left: -999px;
+    transform: var(--transition-speed);
+}
+
+.navbar:hover .logo svg{
+    transform: rotate(-180deg);
+}
+
+.portfolio{
+    background-image: url(https://cdn.wallpapersafari.com/96/31/5OTxYs.jpg);
+    text-align: center;
+    font-family: 'Merriweather', serif;;
+}
+.portfolio h1{
+    text-shadow: 8px 6px 15px rgba(91,92,86,0.93);
+    font-size: 3rem;
+    font-family: 'Tiro Gurmukhi', serif;
+    color: rgb(233, 232, 232);
+}
+
+@media only screen and (max-width: 600px){
+    .navbar{
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+    .opening-text{
+        left: 0;
+        top: 70px;
+        padding: 2px;
+    }
+
+    .logo{
+        display: none;
+    }
+    .title{
+        color: #fff;
+        text-transform: uppercase;
+        line-height: 4rem;
+        font-weight: 200;
+        font-size: 3.5rem;
+    }
+    .navbar-nav{
+        flex-direction: row;
+    }
+
+    #snowfall{
+        background-image: url('https://www.enwallpaper.com/wp-content/uploads/2021/07/Lofi-Aesthetic-Wallpaper-20-715x1284-1.jpg');
+        background-size: 100%;
+    }
+
+    .nav-link{
+        justify-content: center;
+    }
+
+    main {
+        margin: 0;
+      }
+}
+
+#profile {
+    display: flex;
+    background-color: white;
+    width: auto;
+    padding: 20px;
+    box-shadow: 2px 1px 14px 0px rgba(0,0,0,0.75);
+    padding-left: 89px;
+    padding-top: 50px;
+}
+#gambar {
+    flex: 1;
+}
+#nama {
+    padding: 40px;
+    flex: 4;
+}
+#detail {
+    flex: 1;
+    padding: 40px;
+}
+
+.myButton {
+	box-shadow: -10px -6px 0px -12px #899599;
+	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	background-color:#ededed;
+	border-radius:23px;
+	border:1px solid #d6bcd6;
+	display:inline-block;
+	cursor:pointer;
+	color:#3a8a9e;
+	font-family:Arial;
+	font-size:21px;
+	padding:15px 47px;
+	text-decoration:none;
+	text-shadow:0px -2px 0px #e1e2ed;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+	background-color:#bab1ba;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.garis_verikal{
+    border-left: 1px black solid;
+    height: 170px;
+    width: 0px;
+}
+
+@media only screen and (min-width: 600px){
+    .navbar{
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+    
+    .navbar:hover {
+        width: 17rem;
+    }
+
+    .navbar:hover .link-text{
+        display: inline;
+    }
+    
+    .navbar:hover .logo svg{
+        margin-left: 14rem;
+    }
+    
+    .navbar:hover .logo-text{
+        left: 0px;
+    }
+    #snowfall{
+        background-image: url('https://wallpaper.dog/large/20471179.jpg');
+        background-size: 110%;
+    }
+    .opening-text{
+        left: 12%;
+        top: 0;
+    }
+    .title{
+        color: #fff;
+        text-transform: uppercase;
+        line-height: 8rem;
+        font-weight: 400;
+        font-size: 7rem;
+    }
+}
+
+@keyframes revealText {
+    from{
+        transform: translateY(20px); /*Moves the element down by 20px.*/
+    }
+    to{
+        opacity: 1; /*Turn the opacity back on so that we can see the element in it's final animation state.*/
+        transform: none; /*Removes the 20px so that the text will be at the normal starting position at the end of the animation.*/
+    }
+}

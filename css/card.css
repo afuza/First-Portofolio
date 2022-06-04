@@ -1,0 +1,168 @@
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 47%;
+    padding: 0 10px;
+  }
+.column2 {
+    float: left;
+    width: 30%;
+    padding: 20px;
+  }
+.column-blog {
+    float: left;
+    width: 100%;
+    padding: 20px;
+  }
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .card {
+    padding: 50px;
+    text-align: center;
+    background-color: #ffffff;
+    text-align: left;
+    line-height: 2.9rem;
+    font-size: 1.4rem;
+  }
+  .card2 {
+    padding: 54px;
+    text-align: center;
+    background-color: #ffffff;
+    text-align: left;
+    box-shadow: -21px -4px 18px 0px rgba(0,0,0,0.49);
+  }
+  .card-blog {
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 3px 2px 44px 6px rgba(0,0,0,0.75);
+    text-align: left;
+  }
+  .card-isi{
+      flex-wrap: wrap;
+  }
+  .card2:hover{
+      background-color: #E3B295;
+  }
+  .card2  h2{
+      text-align: center;
+  }
+  .cardpe {
+    padding: 50px;
+    text-align: center;
+    background-color: #ffffff;
+    text-align: left;
+    box-shadow: -21px -4px 18px 0px rgba(0,0,0,0.49);
+  }
+
+  .card ul{
+    list-style-type:none;
+    margin-left: 6.5rem;
+  }
+  .card li{
+    list-style-type:none;
+  }
+
+  .card a{
+      color: black;
+        text-decoration:none;  
+  }
+
+.card a:hover{
+    filter: grayscale(0%) opacity(1);
+    color: blueviolet;
+}
+
+.slider{
+    max-width: auto;
+    display: flex;
+  }
+  .slider .card{
+    flex: 1;
+    margin: 0 10px;
+    background: #fff;
+  }
+  .slider .card .img{
+    height: 200px;
+    width: 100%;
+  }
+  .slider .card .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .slider .card .content{
+    padding: 10px 20px;
+  }
+  .card .content .title{
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(12, 17, 17);
+  }
+  .card .content .sub-title{
+    font-size: 20px;
+    font-weight: 600;
+    color: #e74c3c;
+    line-height: 20px;
+  }
+  .card .content p{
+    text-align: justify;
+    margin: 10px 0;
+  }
+  .card .content .btn{
+    display: block;
+    text-align: left;
+    margin: 10px 0;
+  }
+  .card .content .btn button{
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .card .content .btn button:hover{
+    transform: scale(0.9);
+  }
+#team{
+    background-image: url(https://wallpaperaccess.com/full/21591.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-size: 2rem;
+}
+
+.h1team{
+    color: #ffffff;
+    text-shadow: 2px 0px 11px rgba(255,255,255,0.89);
+}
+
+
+  /* Responsive columns - one column layout (vertical) on small screens */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+    .card ul{
+        list-style-type:none;
+        margin-left: 4.5rem;
+      }
+ .column2 {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+      }
+  }
